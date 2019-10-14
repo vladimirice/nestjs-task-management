@@ -1,9 +1,11 @@
 import { IsNotEmpty } from 'class-validator';
 
-export class CreateTaskDto {
+class CreateTaskDto {
   @IsNotEmpty()
   public readonly title: string;
 
   @IsNotEmpty()
   public readonly description: string;
 }
+
+export default CreateTaskDto;

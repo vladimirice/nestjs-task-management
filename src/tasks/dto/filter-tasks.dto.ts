@@ -1,7 +1,7 @@
 import { IsIn, IsNotEmpty, IsOptional } from 'class-validator';
-import { TaskStatus } from '../dictionaries/task-status.enum';
+import TaskStatus from '../dictionaries/task-status.enum';
 
-export class FilterTasksDto {
+class FilterTasksDto {
   @IsOptional()
   @IsIn(Object.keys(TaskStatus))
   public readonly search: string;
@@ -10,3 +10,5 @@ export class FilterTasksDto {
   @IsNotEmpty()
   public readonly status: TaskStatus;
 }
+
+export default FilterTasksDto;
