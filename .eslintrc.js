@@ -60,6 +60,7 @@ module.exports = {
         "node/no-missing-import": "off",
         "no-useless-constructor": "off",
         "no-empty-function": "off",
+        "class-methods-use-this": "off",
       }
     }
   ]

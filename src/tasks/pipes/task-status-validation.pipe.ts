@@ -1,6 +1,6 @@
 import { PipeTransform } from '@nestjs/common/interfaces/features/pipe-transform.interface';
 import { BadRequestException } from '@nestjs/common';
-import { TaskStatus } from '../task.model';
+import { TaskStatus } from '../dictionaries/task-status.enum';
 
 export class TaskStatusValidationPipe implements PipeTransform {
   private readonly validStatuses: string[] = Object.keys(TaskStatus);
