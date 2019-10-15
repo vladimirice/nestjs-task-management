@@ -7,9 +7,7 @@ import { ISignInResponse } from '../interfaces/sign-interfaces';
 
 @Controller('auth')
 class AuthController {
-  public constructor(
-    private authService: AuthService,
-  ) {}
+  public constructor(private authService: AuthService) {}
 
   @Post('/signUp')
   public async signUp(@Body(ValidationPipe) userCredentialsDto: UserCredentialsDto): Promise<void> {
